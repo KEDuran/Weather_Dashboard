@@ -15,6 +15,12 @@
 			integrity="sha384-9aIt2nRpC12Uk9gS9baDl411NQApFmC26EwAOH8WgZl5MYYxFfc+NcPb1dKGj7Sk"
 			crossorigin="anonymous"
 		/>
+		<link
+			rel="stylesheet"
+			href="https://use.fontawesome.com/releases/v5.7.0/css/all.css"
+			integrity="sha384-lZN37f5QGtY3VHgisS14W3ExzMWZxybE1SJSEsQp9S+oqd12jhcu+A56Ebc1zFSJ"
+			crossorigin="anonymous"
+		/>
 		<!-- Custom Style CSS -->
 		<link href="./Assets/CSS/style.css" rel="stylesheet" type="text/css" />
 	</head>
@@ -25,14 +31,24 @@
 		</nav>
 
 		<!-- Container for all Dashboard Components -->
-		<div class="container">
+		<div class="container-column">
 			<!-- column 1 - City Search -->
-			<div class="col-3">
-				<div class="row"></div>
+			<div class="col-2">
+				<!-- City Search Input -->
+				<div class="row mt-3 mx-auto">
+					<div class="input-group">
+						<input type="text" class="form-control" placeholder="Search City" />
+						<div class="input-group-append">
+							<button class="btn btn-primary" type="button" id="button-addon2">
+								<i class="fas fa-search"></i>
+							</button>
+						</div>
+					</div>
+				</div>
 				<div class="row"></div>
 			</div>
 			<!-- Column 2 - Weather Info -->
-			<div class="col-9"></div>
+			<div class="col-10"></div>
 		</div>
 
 		<!-- Bootstrap Javascript -->
