@@ -1,0 +1,2 @@
+var city = "";
+var date = "";
