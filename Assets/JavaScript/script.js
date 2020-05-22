@@ -1,2 +1,2 @@
-var city = "";
+var cities = [];
 var date = "";
