@@ -2,6 +2,10 @@
 var cityName = [];
 var date = "";
 
+/* Invoking the keepCities() function here will make sure that all city values populate
+ on the page after a refresh*/
+keepCities();
+
 /* This function will add a <li> tag item into the weather dashboard UI for each city 
 included in the cityName array.*/
 function createCityList() {
@@ -20,3 +24,14 @@ $("#searchBtn").click(function () {
 	localStorage.setItem("cityName", JSON.stringify(cityName));
 	createCityList();
 });
+
+/* This function is parsing out the cityName items that are saved in local storage and reassigning 
+them back to the <li> tags in the weather dashboard UI after  a page refresh. This function is called 
+at the beginning of the this code.*/
+function keepCities() {
+	var storedCityName = JSON.parse(localStorage.getItem("cityName"));
+	if (storedCityName !== null) {
+		cityName = storedCityName;
+	}
+	createCityList();
+}
