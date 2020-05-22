@@ -6,7 +6,7 @@ function createCityList() {
 	for (var i = 0; i < cityName.length; i++) {
 		var cityLiItem = $("<li>").text(cityName[i]);
 		cityLiItem.addClass("list-group-item");
-		$("#cityList").append(cityLiItem.html());
+		$("#cityList").append(cityLiItem.prop("outerHTML"));
 	}
 }
 
