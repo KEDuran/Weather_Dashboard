@@ -1,7 +1,7 @@
 var cityName = [];
 var date = "";
 
-function cityList() {
+function createCityList() {
 	$("#cityList").empty();
 	for (var i = 0; i < cityName.length; i++) {
 		var cityLiItem = $("<li>").text(cityName[i]);
@@ -12,5 +12,6 @@ function cityList() {
 
 $("#searchBtn").click(function () {
 	cityName.push($("#cityInput").val());
-	cityList();
+	localStorage.setItem("cityName", JSON.stringify(cityName));
+	createCityList();
 });
