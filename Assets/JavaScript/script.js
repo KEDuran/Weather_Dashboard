@@ -1,6 +1,13 @@
-var cities = [];
+var cityName = [];
 var date = "";
 
+function cityList() {
+	$("#cityList").empty();
+	for (var i = 0; i < cityName.length; i++) {
+		$("#cityList").append("<li>");
+	}
+}
+
 $("#searchBtn").click(function () {
-	cities.push($("#cityInput").val());
+	cityName.push($("#cityInput").val());
 });
