@@ -56,8 +56,10 @@ $("#searchBtn").click(function () {
 		// Convert the temp to fahrenheit
 		var tempF = (response.list[0].main.temp - 273.15) * 1.8 + 32;
 
-		// pulling temperature from API and publishing to weather dashboard.
+		// Pulling temperature from API and publishing to weather dashboard.
 		$("#temp").html("Temperature: " + tempF.toFixed(0) + " °F");
+		// Pulling humidity from API and publishing to weather dashboard.
+		$("#humidity").html("Humidity: " + response.list[0].main.humidity + "%");
 	});
 });
 
