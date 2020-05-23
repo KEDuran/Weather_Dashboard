@@ -6,16 +6,16 @@
 }
 
 .moderate {
-	background-color: rgb(255, 217, 0);
+	background-color: rgb(231, 198, 9);
 	color: white;
-	border: 2px solid rgb(255, 217, 0);
+	border: 2px solid rgb(231, 198, 9);
 	border-radius: 8px;
 }
 
 .high {
-	background-color: rgba(238, 104, 14, 0.993);
+	background-color: rgba(248, 109, 16, 0.993);
 	color: white;
-	border: 2px solid rgba(238, 104, 14, 0.993);
+	border: 2px solid rgba(248, 109, 16, 0.993);
 	border-radius: 8px;
 }
 
