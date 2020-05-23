@@ -45,6 +45,9 @@ function makeAjaxCall() {
 		// Pulling wind speed from API and publishing to weather dashboard.
 		$("#wind").html("Wind Speed: " + milesPerHR.toFixed(1) + " MPH");
 
+		/* This is the for loop to add weather data for each day in the 5-day forecast 
+		part the weather dashboard.*/
+
 		/*Because UV index is found at another source URL, I created another queryURL variable
 		specific for the UV index data. This will be used in the ajax method below.*/
 		var queryURLuvi =
