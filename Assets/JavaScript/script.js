@@ -67,8 +67,8 @@ $("#searchBtn").click(function () {
 		// Pulling wind speed from API and publishing to weather dashboard.
 		$("#wind").html("Wind Speed: " + milesPerHR.toFixed(1) + " MPH");
 
-		/* Using nested ajax method to call UV index data based on lat/long from API and 
-		publishing to weather dashboard.*/
+		/*Because UV index is found at another source URL, I created another queryURL variable
+		specific for the UV index data. This will be used in the ajax method below.*/
 		var queryURLuvi =
 			"https://api.openweathermap.org/data/2.5/uvi/history?appid=" +
 			API +
@@ -81,6 +81,8 @@ $("#searchBtn").click(function () {
 			"&end=" +
 			moment().add(1, "d").unix();
 
+		/* Using nested ajax method to call UV index data based on lat/long from API and 
+		publishing to weather dashboard.*/
 		$.ajax({
 			url: queryURLuvi,
 			method: "GET",
