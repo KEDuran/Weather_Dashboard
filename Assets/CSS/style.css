@@ -1,19 +1,34 @@
 .low {
-	background-color: green;
+	background-color: rgb(4, 119, 4);
+	color: white;
+	border: 2px solid rgb(4, 119, 4);
+	border-radius: 8px;
 }
 
 .moderate {
-	background-color: yellow;
+	background-color: rgb(231, 198, 9);
+	color: white;
+	border: 2px solid rgb(231, 198, 9);
+	border-radius: 8px;
 }
 
 .high {
-	background-color: orange;
+	background-color: rgba(248, 109, 16, 0.993);
+	color: white;
+	border: 2px solid rgba(248, 109, 16, 0.993);
+	border-radius: 8px;
 }
 
 .very_high {
-	background-color: red;
+	background-color: rgb(236, 63, 63);
+	color: white;
+	border: 2px solid rgb(236, 63, 63);
+	border-radius: 8px;
 }
 
 .extreme {
-	background-color: violet;
+	background-color: rgb(230, 71, 230);
+	color: white;
+	border: 2px solid rgb(230, 71, 230);
+	border-radius: 8px;
 }
