@@ -10,25 +10,28 @@ A second getURL variable will be set in the makeAjaxCall() function for UV index
 var gueryURL =
 	"https://api.openweathermap.org/data/2.5/forecast?appid=" + API + "&q=";
 
-/* Invoking the keepLastCity() function here will make sure that all city values populate
- on the page after a refresh*/
+/* Invoking the keepLastCity() function here to make sure the last searced city value is populated
+ after a page refresh or when app is opened.*/
 keepLastCity();
 
-// This function will call all API and ajax logic.
+/* This make AjaxCall() function will call all API data and ajax logic needed to populate all applicable
+weather data for the weather dashboard.*/
 function makeAjaxCall() {
-	//This variable wll allow us to the API weather data.
+	//This variable wll allow us to the API weather data based on value of the lastCity variable.
 	var queryURL =
 		"https://api.openweathermap.org/data/2.5/forecast?appid=" +
 		API +
 		"&q=" +
 		lastCity;
 
-	/*This is the ajax method that is weather data getting data from the API based on search city value.*/
+	/*This ajax method will pull all weather data (expect UV Index) from the API source link based on 
+	the entered search city value. UV index data is pulled from second ajax method via a different Open
+	Weather Map source link.*/
 	$.ajax({
 		url: queryURL,
 		method: "GET",
 	}).then(function (response) {
-		// Pulling city, current date, and weather icon from API and publishing to weather dashboard.
+		// Pulls the current city, date, and weather icon from API source link and publishes to weather dashboard.
 		$("#city").html(
 			`${lastCity} ${moment().format(
 				"(M/D/YYYY)"
@@ -36,17 +39,17 @@ function makeAjaxCall() {
 				response.list[0].weather[0].icon
 			}@2x.png"/>`
 		);
-		// Variable to convert the temp to fahrenheit
+		// Variable to convert Kelvin temp to Fahrenheit.
 		var tempF = (response.list[0].main.temp - 273.15) * 1.8 + 32;
-		// Pulling temperature from API and publishing to weather dashboard.
+		// Pulls temperature from API source link and publishes to weather dashboard.
 		$("#temp").html("Temperature: " + tempF.toFixed(0) + " °F");
 
-		// Pulling humidity from API and publishing to weather dashboard.
+		// Pulls humidity from API source link and publishes to weather dashboard.
 		$("#humidity").html("Humidity: " + response.list[0].main.humidity + "%");
 
 		// Variable to convert the meters/second to miles/hour
 		var milesPerHR = response.list[0].wind.speed * 2.237;
-		// Pulling wind speed from API and publishing to weather dashboard.
+		// Pulls wind speed from API source link and publishes to weather dashboard.
 		$("#wind").html("Wind Speed: " + milesPerHR.toFixed(1) + " MPH");
 
 		/* This is the for loop to add weather data for each day in the 5-day forecast 
