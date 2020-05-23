@@ -3,7 +3,8 @@ var cityName = [];
 var date = "";
 var lastCity = "";
 var API = "1151188a4f0910fbef13fb3a9bafd06c";
-var gueryURL = "api.openweathermap.org/data/2.5/forecast?appid=" + API + "&q=";
+var gueryURL =
+	"https://api.openweathermap.org/data/2.5/forecast?appid=" + API + "&q=";
 
 /* Invoking the keepLastCity() function here will make sure that all city values populate
  on the page after a refresh*/
@@ -65,6 +66,27 @@ $("#searchBtn").click(function () {
 		var milesPerHR = response.list[0].wind.speed * 2.237;
 		// Pulling wind speed from API and publishing to weather dashboard.
 		$("#wind").html("Wind Speed: " + milesPerHR.toFixed(1) + " MPH");
+
+		/* Using nested ajax method to call UV index data based on lat/long from API and 
+		publishing to weather dashboard.*/
+		var queryURLuvi =
+			"https://api.openweathermap.org/data/2.5/uvi/history?appid=" +
+			API +
+			"&lat=" +
+			response.city.coord.lat +
+			"&lon=" +
+			response.city.coord.lon +
+			"&start=" +
+			moment().unix() +
+			"&end=" +
+			moment().add(1, "d").unix();
+
+		$.ajax({
+			url: queryURLuvi,
+			method: "GET",
+		}).then(function (response) {
+			$("#uvIndex").html("UV Index: " + response[0].value);
+		});
 	});
 });
 
