@@ -33,17 +33,26 @@ $("#searchBtn").click(function () {
 	localStorage.setItem("lastCity", lastCity);
 	createCityList();
 
+	//This variable wll allow us to the API weather data.
 	var queryURL =
 		"https://api.openweathermap.org/data/2.5/forecast?appid=" +
 		API +
 		"&q=" +
 		lastCity;
 
+	/*This is the ajax method that is getting data from the API based on search city value.*/
 	$.ajax({
 		url: queryURL,
 		method: "GET",
 	}).then(function (response) {
-		$("#city").text(lastCity);
+		// JQuery that is pulling city, date, and weather icon from API.
+		$("#city").html(
+			`${lastCity} ${moment().format(
+				"(M/D/YYYY)"
+			)} <img src ="http://openweathermap.org/img/wn/${
+				response.list[0].weather[0].icon
+			}@2x.png"/>`
+		);
 	});
 });
 
