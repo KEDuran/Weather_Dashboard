@@ -1,7 +1,12 @@
-// Global empty array variable to store names of cities enter in search input tag.
+// Declaring global empty array variable to store names of cities enter in search input tag.
 var cityName = [];
+/* Declaring global empty string variable to store the name of the last city that was searched.
+Added this variable to help meet HW acceptance criteria.*/
 var lastCity = "";
+// Declaring global API variabl to hold my Open Weather Map API key.
 var API = "1151188a4f0910fbef13fb3a9bafd06c";
+/* Declaring first getURL global variable for the API source link where most of weather data is pulled.
+A second getURL variable will be set in the makeAjaxCall() function for UV index data.*/
 var gueryURL =
 	"https://api.openweathermap.org/data/2.5/forecast?appid=" + API + "&q=";
 
@@ -60,8 +65,8 @@ function makeAjaxCall() {
 			);
 		}
 
-		/*Because UV index is found at another source URL, I created another queryURL variable
-		specific for the UV index data. This will be used in the ajax method below.*/
+		/*Because UV index is found at another source URL that the previously added weather data, 
+		I created another queryURL variable specific for the UV index data. This will be used in the ajax method below.*/
 		var queryURLuvi =
 			"https://api.openweathermap.org/data/2.5/uvi/history?appid=" +
 			API +
