@@ -2,6 +2,9 @@
 var cityName = [];
 var date = "";
 var lastCity = "";
+var API = "1151188a4f0910fbef13fb3a9bafd06c";
+var getURL =
+	"http://samples.openweathermap.org/data/2.5/weather?appid=" + API + "&q=";
 
 /* Invoking the keepLastCity() function here will make sure that all city values populate
  on the page after a refresh*/
