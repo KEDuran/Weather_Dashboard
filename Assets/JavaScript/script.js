@@ -53,13 +53,18 @@ $("#searchBtn").click(function () {
 				response.list[0].weather[0].icon
 			}@2x.png"/>`
 		);
-		// Convert the temp to fahrenheit
+		// Variable to convert the temp to fahrenheit
 		var tempF = (response.list[0].main.temp - 273.15) * 1.8 + 32;
-
 		// Pulling temperature from API and publishing to weather dashboard.
 		$("#temp").html("Temperature: " + tempF.toFixed(0) + " °F");
+
 		// Pulling humidity from API and publishing to weather dashboard.
 		$("#humidity").html("Humidity: " + response.list[0].main.humidity + "%");
+
+		// Variable to convert the meters/second to miles/hour
+		var milesPerHR = response.list[0].wind.speed * 2.237;
+		// Pulling wind speed from API and publishing to weather dashboard.
+		$("#wind").html("Wind Speed: " + milesPerHR.toFixed(1) + " MPH");
 	});
 });
 
