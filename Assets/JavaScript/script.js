@@ -87,7 +87,24 @@ $("#searchBtn").click(function () {
 			url: queryURLuvi,
 			method: "GET",
 		}).then(function (response) {
-			$("#uvIndex").html("UV Index: " + response[0].value);
+			var UVIndex = response[0].value;
+			$("#uvIndex").html(UVIndex);
+
+			// Removes color class in order to apply the correct color for each UV index per city search.
+			$("#uvIndex").removeClass();
+
+			// If statement to add coloration to UV index based on value.
+			if (UVIndex >= 0 && UVIndex < 3) {
+				$("#uvIndex").addClass("low p-1");
+			} else if (UVIndex >= 3 && UVIndex < 6) {
+				$("#uvIndex").addClass("moderate p-1");
+			} else if (UVIndex >= 6 && UVIndex < 8) {
+				$("#uvIndex").addClass("high p-1");
+			} else if (UVIndex >= 8 && UVIndex < 11) {
+				$("#uvIndex").addClass("very_high p-1");
+			} else {
+				$("#uvIndex").addClass("extreme p-1");
+			}
 		});
 	});
 });
