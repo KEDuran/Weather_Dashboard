@@ -10,21 +10,6 @@ var gueryURL =
  on the page after a refresh*/
 keepLastCity();
 
-/* This function will add a <li> tag item into the weather dashboard UI for each city 
-included in the cityName array and help keep track of the last city name value that
-was searched.*/
-function createCityList() {
-	$("#cityList").empty();
-	for (var i = 0; i < cityName.length; i++) {
-		var cityLiItem = $("<button>").text(cityName[i]);
-		cityLiItem.addClass("btn btn-outline-primary");
-		cityLiItem.click(function () {
-			makeAjaxCall();
-		});
-		$("#cityList").append(cityLiItem.prop("outerHTML"));
-	}
-}
-
 // This function will call all API and ajax logic.
 function makeAjaxCall() {
 	//This variable wll allow us to the API weather data.
@@ -100,6 +85,21 @@ function makeAjaxCall() {
 			}
 		});
 	});
+}
+
+/* This function will add a <li> tag item into the weather dashboard UI for each city 
+included in the cityName array and help keep track of the last city name value that
+was searched.*/
+function createCityList() {
+	$("#cityList").empty();
+	for (var i = 0; i < cityName.length; i++) {
+		var cityLiItem = $("<button>").text(cityName[i]);
+		cityLiItem.addClass("btn btn-outline-primary");
+		cityLiItem.on("click", function () {
+			makeAjaxCall();
+		});
+		$("#cityList").append(cityLiItem);
+	}
 }
 
 /* This function will push all cities names that are entered into the search input tag 
