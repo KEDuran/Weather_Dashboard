@@ -1,6 +1,5 @@
 // Global empty array variable to store names of cities enter in search input tag.
 var cityName = [];
-var date = "";
 var lastCity = "";
 var API = "1151188a4f0910fbef13fb3a9bafd06c";
 var gueryURL =
