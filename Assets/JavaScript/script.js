@@ -110,7 +110,9 @@ function createCityList() {
 	$("#cityList").empty();
 	for (var i = 0; i < cityName.length; i++) {
 		var cityLiItem = $("<button>").text(cityName[i]);
-		cityLiItem.addClass("btn btn-outline-primary");
+		cityLiItem.addClass(
+			"btn btn-outline-secondary text-dark d-flex justify-content-start"
+		);
 		cityLiItem.on("click", function () {
 			lastCity = $(this).text();
 			makeAjaxCall();
