@@ -45,7 +45,7 @@ $("#searchBtn").click(function () {
 		url: queryURL,
 		method: "GET",
 	}).then(function (response) {
-		// JQuery that is pulling city, date, and weather icon from API.
+		// Pulling city, current date, and weather icon from API and publishing to weather dashboard.
 		$("#city").html(
 			`${lastCity} ${moment().format(
 				"(M/D/YYYY)"
@@ -53,6 +53,11 @@ $("#searchBtn").click(function () {
 				response.list[0].weather[0].icon
 			}@2x.png"/>`
 		);
+		// Convert the temp to fahrenheit
+		var tempF = (response.list[0].main.temp - 273.15) * 1.8 + 32;
+
+		// pulling temperature from API and publishing to weather dashboard.
+		$("#temp").html("Temperature: " + tempF.toFixed(0) + " °F");
 	});
 });
 
