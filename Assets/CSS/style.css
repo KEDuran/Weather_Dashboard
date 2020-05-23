@@ -1,3 +1,7 @@
+/* UV index categories are refereneced from the United States Environmental Protection Agency.
+URL link - https://www.epa.gov/sunsafety/uv-index-1 */
+
+/* UV Index Category 1 */
 .low {
 	background-color: rgb(4, 119, 4);
 	color: white;
@@ -5,6 +9,7 @@
 	border-radius: 8px;
 }
 
+/* UV Index Category 2 */
 .moderate {
 	background-color: rgb(231, 198, 9);
 	color: white;
@@ -12,6 +17,7 @@
 	border-radius: 8px;
 }
 
+/* UV Index Category 3 */
 .high {
 	background-color: rgba(248, 109, 16, 0.993);
 	color: white;
@@ -19,6 +25,7 @@
 	border-radius: 8px;
 }
 
+/* UV Index Category 4 */
 .very_high {
 	background-color: rgb(236, 63, 63);
 	color: white;
@@ -26,6 +33,7 @@
 	border-radius: 8px;
 }
 
+/* UV Index Category 5 */
 .extreme {
 	background-color: rgb(230, 71, 230);
 	color: white;
