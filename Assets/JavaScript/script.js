@@ -40,7 +40,7 @@ $("#searchBtn").click(function () {
 		"&q=" +
 		lastCity;
 
-	/*This is the ajax method that is getting data from the API based on search city value.*/
+	/*This is the ajax method that is weather data getting data from the API based on search city value.*/
 	$.ajax({
 		url: queryURL,
 		method: "GET",
