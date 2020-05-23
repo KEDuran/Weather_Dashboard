@@ -96,6 +96,7 @@ function createCityList() {
 		var cityLiItem = $("<button>").text(cityName[i]);
 		cityLiItem.addClass("btn btn-outline-primary");
 		cityLiItem.on("click", function () {
+			lastCity = $(this).text();
 			makeAjaxCall();
 		});
 		$("#cityList").append(cityLiItem);
@@ -113,8 +114,8 @@ $("#searchBtn").click(function () {
 	makeAjaxCall();
 });
 
-/* This function its extracting the city name array from local storage and also extracting the last
-searched city value from local storage. Then, the create*/
+/* This function its extracting the city name array from local storage and also extracting 
+the last searched city value from local storage. Then, the create*/
 function keepLastCity() {
 	var storedLastCity = localStorage.getItem("lastCity");
 	if (storedLastCity !== null && storedLastCity !== "") {
