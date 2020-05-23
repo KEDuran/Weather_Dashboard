@@ -19,21 +19,14 @@ function createCityList() {
 		var cityLiItem = $("<button>").text(cityName[i]);
 		cityLiItem.addClass("btn btn-outline-primary");
 		cityLiItem.click(function () {
-			// here is the where the ajax function for weather data.
+			makeAjaxCall();
 		});
 		$("#cityList").append(cityLiItem.prop("outerHTML"));
 	}
 }
 
-/* This function will push all cities names that are entered into the search input tag 
-when the user clicked the search icon button.*/
-$("#searchBtn").click(function () {
-	var cityTextValue = $("#cityInput").val();
-	cityName.push(cityTextValue);
-	lastCity = cityTextValue;
-	localStorage.setItem("lastCity", lastCity);
-	createCityList();
-
+// This function will call all API and ajax logic.
+function makeAjaxCall() {
 	//This variable wll allow us to the API weather data.
 	var queryURL =
 		"https://api.openweathermap.org/data/2.5/forecast?appid=" +
@@ -107,6 +100,17 @@ $("#searchBtn").click(function () {
 			}
 		});
 	});
+}
+
+/* This function will push all cities names that are entered into the search input tag 
+when the user clicked the search icon button.*/
+$("#searchBtn").click(function () {
+	var cityTextValue = $("#cityInput").val();
+	cityName.push(cityTextValue);
+	lastCity = cityTextValue;
+	localStorage.setItem("lastCity", lastCity);
+	createCityList();
+	makeAjaxCall();
 });
 
 /* This function its extracting the city name array from local storage and also extracting the last
@@ -116,6 +120,10 @@ function keepLastCity() {
 	if (storedLastCity !== null && storedLastCity !== "") {
 		lastCity = storedLastCity;
 		cityName.push(storedLastCity);
+	} else {
+		lastCity = "Austin";
+		cityName.push(lastCity);
 	}
 	createCityList();
+	makeAjaxCall();
 }
