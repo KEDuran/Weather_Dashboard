@@ -3,7 +3,7 @@ var cityName = [];
 var date = "";
 var lastCity = "";
 var API = "1151188a4f0910fbef13fb3a9bafd06c";
-var getURL = "api.openweathermap.org/data/2.5/forecast?appid=" + API + "&q=";
+var gueryURL = "api.openweathermap.org/data/2.5/forecast?appid=" + API + "&q=";
 
 /* Invoking the keepLastCity() function here will make sure that all city values populate
  on the page after a refresh*/
@@ -32,6 +32,19 @@ $("#searchBtn").click(function () {
 	lastCity = cityTextValue;
 	localStorage.setItem("lastCity", lastCity);
 	createCityList();
+
+	var queryURL =
+		"https://api.openweathermap.org/data/2.5/forecast?appid=" +
+		API +
+		"&q=" +
+		lastCity;
+
+	$.ajax({
+		url: queryURL,
+		method: "GET",
+	}).then(function (response) {
+		$("#city").text(lastCity);
+	});
 });
 
 /* This function its extracting the city name array from local storage and also extracting the last
