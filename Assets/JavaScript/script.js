@@ -35,7 +35,7 @@ function makeAjaxCall() {
 		$("#city").html(
 			`${lastCity} ${moment().format(
 				"(M/D/YYYY)"
-			)} <img src ="http://openweathermap.org/img/wn/${
+			)} <img src ="https://openweathermap.org/img/wn/${
 				response.list[0].weather[0].icon
 			}@2x.png"/>`
 		);
@@ -61,7 +61,7 @@ function makeAjaxCall() {
 
 			$("#cityTitle" + i).html(m.format("M/D/YYYY"));
 			$("#cityIcon" + i).html(
-				`<img src ="http://openweathermap.org/img/wn/${response.list[i].weather[0].icon}@2x.png"/>`
+				`<img src ="https://openweathermap.org/img/wn/${response.list[i].weather[0].icon}@2x.png"/>`
 			);
 			$("#cityTemp" + i).html("Temp: " + tempF.toFixed(2) + " °F");
 			$("#cityHumidity" + i).html(
