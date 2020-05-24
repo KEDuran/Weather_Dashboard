@@ -21,6 +21,8 @@ In the content below, I included links to (a) my weather dashboard app and (b) t
 
 In this section, I included the specific user story and acceptance criteria that was included in this homework assignment's instructions.
 
+I also included a notes/FYI section below that provide additional details surrounding my approach for developing this weather dashboard.
+
 ### User Story from Homework Assignment Instructions
 
 ```
@@ -47,9 +49,7 @@ WHEN I open the weather dashboard
 THEN I am presented with the last searched city forecast
 ```
 
-## Sample Screenshot of My Weather Dashboard App
-
-### FYI on My Approach
+### Notes on My Approach
 
 #### Last Searched City Logic
 
@@ -58,5 +58,15 @@ Based on the acceptance criteria outlined above, I developed the weather app to 
 #### Auto Default for No Search History
 
 The weather dashboard is also designed to automatically default and populate Austin, Texas weather data if no city was previously searched. The last searched city I entered for testing was Pflugerville, TX so my sample screenshot below shows weather data for Pflugerville, TX as of Saturday (5/23/2020) night.
+
+#### Applied United States EPA UV Index Categories
+
+Before starting this homework assignment, I conducted some additional research regarding UV index categories. Based on my research, the [United States Environmental Protection Agency](https://www.epa.gov/sunsafety/uv-index-1), there are five UV index categories. As a result, I used the following five categories to determine the coloration of the UV index readings in the weather dashboard app.
+
+![US EPA UV Index Categories](./Assets/Images/UV_Index.png)
+
+## Sample Screenshot of My Weather Dashboard App
+
+In this section, I included a screenshot of my weather dashboard app below.
 
 ![Weather Dashboard Screenshot](./Assets/Images/weather_dashboard.png)
