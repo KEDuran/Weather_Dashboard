@@ -57,7 +57,7 @@ Based on the acceptance criteria outlined above, I developed the weather dashboa
 
 #### Auto Default for No Search History Scenario
 
-The weather dashboard is also designed to automatically populate Austin, Texas weather data if no previous city search history is avaliable. The weather dashboard screenshot below shows the weather data for Austin, Texas.
+The weather dashboard is also designed to automatically populate Austin, Texas weather data if no previous city search history is avaliable. The weather dashboard screenshot below shows the weather data for only Austin, Texas because no city search historical entries had been made under teh GitHub pages from where I was viewing the weather dashboard.
 
 #### Applied United States EPA UV Index Categories
 
