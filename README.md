@@ -1,25 +1,25 @@
 # Homework Assignment 6 - Weather Dashboard App
 
-The purpose of this homwork assignment was to build a weather dashboard that will run within a browser and use [OpenWeather API](https://openweathermap.org/api) as a third-party API to retrieve weather data for any searched city. I have included a sample screenshot for my weather dashboard at the bottom of this ReadMe markdown document.
+The purpose of this homwork assignment was to build a weather dashboard that will run within a browser and use [OpenWeather API](https://openweathermap.org/api) as a third-party API to retrieve weather data for any searched city entered in the dashboard. I have included a sample screenshot of my weather dashboard in the last section of this document.
 
-As specified in this homework assignment's instructions, I developed the browser to meet the following requirements:
+As specified in the homework assignment's instructions, I developed the browser to meet the following requirements:
 
 - Run in the browser with a responsive layout.
 - Feature dynamically updated HTML and CSS.
 - Access weather data by using the [OpenWeather API](https://openweathermap.org/api).
-- Meets all acceptance criteria (included below).
-- Uses `localStorage` to store any persistent data.
+- Meet all acceptance criteria (included below).
+- Use `localStorage` to store any persistent data.
 
 ## Links to My Weather Dashboard App and GitHub Repo
 
-In the content below, I included links to (a) my weather dashboard app and (b) the associated GitHub repo that I used to develop this app.
+In the content below, I included links to both (a) my weather dashboard app and (b) the associated GitHub repo that I used to develop this app.
 
 - GitHub Repo - [https://github.com/KEDuran/Weather_Dashboard](https://github.com/KEDuran/Weather_Dashboard)
 - Link to My Weather Dashboard App - [https://keduran.github.io/Weather_Dashboard/](https://keduran.github.io/Weather_Dashboard/)
 
 ## Assignment Scope
 
-In this section, I included the specific user story and acceptance criteria that was included in this homework assignment's instructions.
+In this section, I included the specific user story and acceptance criteria that was included in the homework assignment's instructions.
 
 I also included a notes/FYI section below that provide additional details surrounding my approach for developing this weather dashboard.
 
@@ -49,19 +49,19 @@ WHEN I open the weather dashboard
 THEN I am presented with the last searched city forecast
 ```
 
-### Notes on My Approach
+### Notes to Consider for My Developer Approach
 
 #### Last Searched City Logic
 
-Based on the acceptance criteria outlined above, I developed the weather app to repopulate the weather dashboard data upon refresh for the last city that was actually searched by being typed into the search city input item and then followed by actually clicking on the search button. _Any click activity within the city search history buttons will not trigger any "stored last city searched" logic_.
+Based on the acceptance criteria outlined above, I developed the weather dashboard app to repopulate weather data upon refresh for the last city that was actually searched by (a) being typed into the search city input item and (b) then followed by clicking on the search button. _Any click activity within the city search history buttons will not trigger any "stored last city searched" logic included in the script.js file_.
 
-#### Auto Default for No Search History
+#### Auto Default for No Search History Scenario
 
-The weather dashboard is also designed to automatically default and populate Austin, Texas weather data if no city was previously searched. The last searched city I entered for testing was Pflugerville, TX so my sample screenshot below shows weather data for Pflugerville, TX as of Saturday (5/23/2020) night.
+The weather dashboard is also designed to automatically populate Austin, Texas weather data if no previous city search history is avaliable. The weather dashboard screenshot below shows the weather data for Austin, Texas.
 
 #### Applied United States EPA UV Index Categories
 
-Before starting this homework assignment, I conducted some additional research regarding UV index categories. Based on my research, the [United States Environmental Protection Agency](https://www.epa.gov/sunsafety/uv-index-1), there are five UV index categories. As a result, I used the following five categories to determine the coloration of the UV index readings in the weather dashboard app.
+Before starting this homework assignment, I conducted some additional research regarding UV index categories. Based on my research, the [United States Environmental Protection Agency](https://www.epa.gov/sunsafety/uv-index-1) measures UV index according to five categories - demonstrated in the UV index screenshot below. As a result, I used the following five categories when applying the coloration categories for the UV index readings in the weather dashboard app.
 
 ![US EPA UV Index Categories](./Assets/Images/UV_Index.png)
 
