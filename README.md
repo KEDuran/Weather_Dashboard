@@ -47,8 +47,12 @@ WHEN I open the weather dashboard
 THEN I am presented with the last searched city forecast
 ```
 
+## Sample Screenshot of My Weather Dashboard App
+
 ### FYI on My Approach
 
 Based on the acceptance criteria outlined above, I developed the weather app to repopulate the weather dashboard data upon refresh for the last city that was actually searched by being typed into the search city input item and then followed by actually clicking on the search button. _Any click activity within the city search history buttons will not trigger any "last city searched" logic_.
 
-- **Please note** - The weather dashboard is also designed to automatically default and populate Austin, Texas weather data if no city was previously searched.
+- **Please note** - The weather dashboard is also designed to automatically default and populate Austin, Texas weather data if no city was previously searched. The last searched city I entered for testing was Pflugerville, TX so my sample screenshot below shows weather data for Pflugerville, TX as of Saturday (5/23/2020) night.
+
+![Weather Dashboard Screenshot](./Assets/Images/weather_dashboard.png)
