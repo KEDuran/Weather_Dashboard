@@ -10,4 +10,9 @@ As specified in this homework assignment's instructions, I developed the browser
 - Meets all acceptance criteria (included below).
 - Uses `localStorage` to store any persistent data.
 
-## Links to My Weaather Dashboard App and GitHub Repo
+## Links to My Weather Dashboard App and GitHub Repo
+
+In the content below, I included links to (a) my weather dashboard app and (b) the associated GitHub repo that I used to develop this app.
+
+- GitHub Repo - [https://github.com/KEDuran/Weather_Dashboard](https://github.com/KEDuran/Weather_Dashboard)
+- Link to My Weather Dashboard App - [https://keduran.github.io/Weather_Dashboard/](https://keduran.github.io/Weather_Dashboard/)
