@@ -1,5 +1,4 @@
 // Require dotenv NPM module to hide API keys
-// require("dotenv").config();
 
 // Declaring global empty array variable to store names of cities enter in search input tag.
 var cityName = [];
@@ -10,7 +9,7 @@ var lastCity = "";
 var API = "1151188a4f0910fbef13fb3a9bafd06c";
 /* Declaring first getURL global variable for the API source link where most of weather data is pulled.
 A second getURL variable will be set in the makeAjaxCall() function for UV index data.*/
-var queryURL =
+var gueryURL =
 	"https://api.openweathermap.org/data/2.5/forecast?appid=" + API + "&q=";
 
 /* Invoking the keepLastCity() function here to make sure the last searced city value is populated
