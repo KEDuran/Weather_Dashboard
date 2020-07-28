@@ -4,11 +4,13 @@ var cityName = [];
 Added this variable to help meet HW acceptance criteria.*/
 var lastCity = "";
 // Declaring global API variabl to hold my Open Weather Map API key.
-var API = "1151188a4f0910fbef13fb3a9bafd06c";
+var API = process.env.API_KEY;
 /* Declaring first getURL global variable for the API source link where most of weather data is pulled.
 A second getURL variable will be set in the makeAjaxCall() function for UV index data.*/
-var gueryURL =
+var queryURL =
 	"https://api.openweathermap.org/data/2.5/forecast?appid=" + API + "&q=";
+// Require dotenv NPM module to hide API keys
+require("dotenv").config();
 
 /* Invoking the keepLastCity() function here to make sure the last searced city value is populated
  after a page refresh or when app is opened.*/
