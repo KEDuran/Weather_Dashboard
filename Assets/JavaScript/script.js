@@ -1,5 +1,5 @@
 // Require dotenv NPM module to hide API keys
-require("dotenv").config();
+// require("dotenv").config();
 
 // Declaring global empty array variable to store names of cities enter in search input tag.
 var cityName = [];
@@ -7,7 +7,7 @@ var cityName = [];
 Added this variable to help meet HW acceptance criteria.*/
 var lastCity = "";
 // Declaring global API variabl to hold my Open Weather Map API key.
-var API = process.env.API_KEY;
+var API = "1151188a4f0910fbef13fb3a9bafd06c";
 /* Declaring first getURL global variable for the API source link where most of weather data is pulled.
 A second getURL variable will be set in the makeAjaxCall() function for UV index data.*/
 var queryURL =
